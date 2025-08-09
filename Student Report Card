@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class StudentReport {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter your Class: ");
+        String studentClass = sc.nextLine();
+
+        System.out.print("Enter your Age: ");
+        int age = sc.nextInt();
+
+        System.out.print("Enter your Gender (M/F/O): ");
+        String gender = sc.next(); 
+        System.out.print("Enter marks for subject 1, 2, and 3 separated by space: ");
+        int sub1 = sc.nextInt();
+        int sub2 = sc.nextInt();
+        int sub3 = sc.nextInt();
+        double total = sub1 + sub2 + sub3;
+        double avg = total / 3.0;
+        double maxTotal = 300.0;
+        double percentage = (total / maxTotal) * 100;
+        String passFail = (percentage >= 40) ? "Pass" : "Fail";
+        System.out.println("\n--- Student Report ---");
+        System.out.println("Name: " + name);
+        System.out.println("Class: " + studentClass);
+        System.out.println("Age: " + age);
+        System.out.println("Gender: " + gender);
+        System.out.println("Subject 1 Marks: " + sub1);
+        System.out.println("Subject 2 Marks: " + sub2);
+        System.out.println("Subject 3 Marks: " + sub3);
+        System.out.println("Total Obtained Marks: " + total);
+        System.out.println("Average Marks: " + avg);
+        System.out.println("Percentage: " + percentage + "%");
+        System.out.println("Result: " + passFail);
+
+        sc.close();
+    }
+}
